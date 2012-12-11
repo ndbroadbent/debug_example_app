@@ -35,6 +35,6 @@ DebugExample::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  # Enforces referenced assets to match config.assets.precompile 
+  # Forces included assets to be added to config.assets.precompile
   config.assets.enforce_precompile = true
 end

@@ -59,7 +59,9 @@ module DebugExample
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-    config.assets.precompile += %w( custom_code.js )
+    # Reload config/assets_precompile when changed
+    config.assets.original_precompile = config.assets.precompile.dup
+    config.to_prepare { load 'config/assets_precompile.rb' }
+    config.watchable_files << 'config/assets_precompile.rb'
   end
 end

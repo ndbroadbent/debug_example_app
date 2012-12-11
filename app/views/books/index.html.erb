@@ -13,9 +13,11 @@
     </tr>
   </thead>
   <tbody>
+    <%# binding.pry %>
+
     <% @books.each do |book| %>
       <tr>
-        <td><%= link_to book.id, book_path(book) %></td>
+        <td><%= link_to book.id, book_path(book) %> <%# book.isbn %> </td>
         <td><%= link_to book.title, book_path(book) %></td>
         <td><%= book.author %></td>
         <td><%=l book.created_at %></td>

@@ -1,45 +1,33 @@
 source 'https://rubygems.org'
 
-gem 'rails', path: '~/code/gems/rails' #3.2.9'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '3.2.9'
+gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
 
 gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+  gem 'turbo-sprockets-rails3'
 end
 
 group :development do
-  gem 'debugger'
-  gem 'better_errors'
+  gem 'better_errors', github: 'charliesome/better_errors'
   gem 'binding_of_caller'
+  gem 'assets_precompile_enforcer'
+  gem 'disable_assets_logger'
 end
 
-gem 'twitter-bootstrap-rails'
-gem 'jquery-rails'
+group :development, :test do
+  gem 'debugger'
+  gem 'awesome_print'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+# Use thin as the app server
+gem 'thin'
