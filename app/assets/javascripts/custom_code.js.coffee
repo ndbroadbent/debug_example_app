@@ -1,1 +1,1 @@
-console.log "Everything is fine"
+#console.log "Loaded from custom_code.js.coffee"

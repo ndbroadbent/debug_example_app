@@ -13,6 +13,8 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    binding.pry
+
     @book = Book.find(params[:id])
 
     respond_to do |format|
@@ -79,5 +81,9 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url }
       format.json { head :no_content }
     end
+  end
+
+  def test_error
+    raise 'Error!'
   end
 end

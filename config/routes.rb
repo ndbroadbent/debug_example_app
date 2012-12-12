@@ -1,5 +1,9 @@
 DebugExample::Application.routes.draw do
-  resources :books
+  resources :books do
+    collection do
+      get :test_error
+    end
+  end
 
 
   # The priority is based upon order of creation:
