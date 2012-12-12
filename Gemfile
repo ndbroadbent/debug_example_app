@@ -31,3 +31,5 @@ end
 
 # Use thin as the app server
 gem 'thin'
+
+gem 'airbrake'
