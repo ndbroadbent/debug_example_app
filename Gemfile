@@ -10,8 +10,11 @@ gem 'sqlite3'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'less-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer'
+
   gem 'turbo-sprockets-rails3'
 end
 
@@ -23,6 +26,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rspec-rails'
+
   gem 'debugger'
   gem 'awesome_print'
   gem 'pry-rails'
