@@ -1,1 +1,0 @@
-(function(){console.log("Everything is fine")}).call(this);
